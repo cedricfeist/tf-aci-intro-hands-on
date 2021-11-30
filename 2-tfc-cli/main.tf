@@ -1,4 +1,12 @@
 terraform {
+
+ backend "remote" {
+   organization = "DevNetWorkshop2"
+   workspaces {
+     name = "cfeist_CLI"
+   }
+ }
+
   required_providers {
     aci = {
       source = "CiscoDevNet/aci"
