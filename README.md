@@ -4,15 +4,15 @@ Welcome to this introductory Hands-On session for Terraform with ACI.
 
 ### Table of Contents
 
-Getting Familiar with Terraform Commands and Files
+[Getting Familiar with Terraform Commands and Files](https://github.com/cedricfeist/tf-aci-intro-hands-on#intro-to-terraform-cloud)
 
-Config Structure and Variables
+[Config Structure and Variables](https://github.com/cedricfeist/tf-aci-intro-hands-on#intro-to-terraform-cloud)
 
-Understanding Terraform State
+[Understanding Terraform State](https://github.com/cedricfeist/tf-aci-intro-hands-on#understanding-terraform-state)
 
-Intro to Terraform Cloud
+[Intro to Terraform Cloud](https://github.com/cedricfeist/tf-aci-intro-hands-on#intro-to-terraform-cloud)
 
-Terraform Cloud with GitHub
+[Terraform Cloud with GitHub](https://github.com/cedricfeist/tf-aci-intro-hands-on#terraform-cloud-with-github)
 
 
 First things first:
@@ -25,8 +25,9 @@ git clone https://github.com/cedricfeist/tf-aci-intro-hands-on
 cd tf-aci-intro-hands-on
 ```
 
-### Getting Familiar with Terraform Commands and Files
 
+### Getting Familiar with Terraform Commands and Files
+------
 Navigate to the first folder.
 
 ```
@@ -98,8 +99,9 @@ terraform destroy --auto-approve
 
 :warning: The `--auto-approve` flag removes the need to type yes to approve changes. 
 
-### Config Structure and Variables
 
+### Config Structure and Variables
+------
 Terraform Configuration does not have to be written in a single file. It is best practice to separate parts of a configuration to different files, which in turn makes it easier to track changes. 
 
 #### Variables
@@ -152,8 +154,9 @@ We now get an output of an object which was created during our apply process. Th
 
 Do not destroy these changes. 
 
-### Understanding Terraform State
 
+### Understanding Terraform State
+------
 Open up main.tf. 
 
 ```
@@ -178,8 +181,9 @@ You will see that some resources might be deleted and recreated, while some reso
 terraform destroy --auto-approve
 ```
 
-### Intro to Terraform Cloud
 
+### Intro to Terraform Cloud
+------
 Go to the second directory. 
 
 ```
@@ -237,8 +241,9 @@ Wait until the tenant has been provisioned, and go to your Workspace > States. Y
 terraform destroy
 ```
 
-### Terraform Cloud with GitHub
 
+### Terraform Cloud with GitHub
+------
 Now our state file is hosted in the cloud, but we still have our configuration hosted locally, which is not ideal if multiple people will be working on it. Luckily, TFC has Version Control System integrations to simplify the connection with GitHub, GitLab, and others. 
 
 First, log into GitHub and create a new repo under the DevNetWorkshop2 Organisation and give it a unique name. 
