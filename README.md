@@ -44,6 +44,8 @@ Take a look at our terraform file: main.tf (either type `cat main.tf` or open it
 
 Look at the structure, and what types of resources will be created. 
 
+###### Starting Terraform
+
 It's time to create our first set of resources using Terraform. 
 
 First we need to Initialize Terraform - This will download the required Terraform Providers. In this case the aci terraform provider, which is maintained by Cisco, and validated. More providers can be found in the [Provider Registry](https://registry.terraform.io/browse/providers).
@@ -53,6 +55,8 @@ terraform init
 ```
 
 Before we go ahead and create our resources we can do a dry run using the `plan` command. 
+
+###### Plan
 
 ```
 terraform plan
@@ -76,6 +80,8 @@ Enter a value: use the crecentials provided
 
 You should see a list of resources that will be created. 
 
+###### Apply
+
 If everything looks good, we can apply the changes using the `apply` command. 
 
 ```
@@ -86,7 +92,7 @@ You will need to approve the changes by typing `yes` when prompted.
 
 To go the ACI GUI (https://10.254.1.21/) to see tenant that has been created.
 
-Destroying Infrastructure
+###### Destroying Infrastructure
 
 One of the differentiators of Terraform, is that managed infastructure can be removed just as quickly as it was created. 
 
